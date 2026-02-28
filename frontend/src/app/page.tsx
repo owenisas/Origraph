@@ -1,12 +1,29 @@
+/**
+ * AquaMark - Main Landing Page
+ * 
+ * This is the primary user interface for the invisible watermarking system.
+ * Features:
+ * - Header navigation with branding
+ * - Hero section with headline and CTA
+ * - WatermarkTool component for embedding/detecting watermarks
+ * - Feature highlights showcasing the system's capabilities
+ * - Responsive design for all screen sizes
+ */
+
 import { WatermarkTool } from "@/components/watermark-tool";
 import { Droplets, ShieldCheck, Zap } from "lucide-react";
 
+/**
+ * Home component - Main page render
+ * Returns the complete application interface with navigation, hero section, and tools
+ */
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col font-body">
-      {/* Navigation Header */}
+      {/* Navigation Header - Sticky top bar with app branding and nav links */}
       <header className="border-b border-white/5 bg-background/50 backdrop-blur-xl sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+          {/* Logo and branding */}
           <div className="flex items-center gap-2">
             <div className="bg-primary/20 p-2 rounded-lg">
               <Droplets className="w-6 h-6 text-accent" />
@@ -15,6 +32,8 @@ export default function Home() {
               Aqua<span className="text-accent">Mark</span>
             </h1>
           </div>
+
+          {/* Navigation links - Hidden on mobile */}
           <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-muted-foreground">
             <a href="#" className="hover:text-accent transition-colors">How it works</a>
             <a href="#" className="hover:text-accent transition-colors">Security</a>
@@ -24,6 +43,7 @@ export default function Home() {
       </header>
 
       <main className="flex-1 max-w-7xl mx-auto w-full px-4 py-8 md:py-12">
+        {/* Hero section with headline and description */}
         <div className="max-w-3xl mb-12">
           <h2 className="text-4xl md:text-5xl font-extrabold mb-4 font-headline text-foreground leading-tight">
             Protect your content with <br />
@@ -32,15 +52,17 @@ export default function Home() {
             </span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            AquaMark uses AI to subtly embed hidden data into your text. 
+            AquaMark uses cryptographic watermarking to subtly embed hidden data into your text. 
             Imperceptible to the eye, but persistent for verification.
           </p>
         </div>
 
+        {/* Main watermarking tool component */}
         <WatermarkTool />
 
-        {/* Feature Highlights */}
+        {/* Feature Highlights - Three column grid */}
         <section className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Feature 1: Secure Metadata */}
           <div className="bg-card/50 p-6 rounded-2xl border border-white/5">
             <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
               <ShieldCheck className="w-6 h-6 text-accent" />
@@ -50,6 +72,8 @@ export default function Home() {
               Metadata is woven into the character structure of the text itself, making it resilient to simple copy-pastes.
             </p>
           </div>
+
+          {/* Feature 2: Zero Visual Impact */}
           <div className="bg-card/50 p-6 rounded-2xl border border-white/5">
             <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
               <Droplets className="w-6 h-6 text-accent" />
@@ -59,18 +83,21 @@ export default function Home() {
               The watermarked text looks exactly like the original. No weird characters or visible markers.
             </p>
           </div>
+
+          {/* Feature 3: Instant Processing */}
           <div className="bg-card/50 p-6 rounded-2xl border border-white/5">
             <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
               <Zap className="w-6 h-6 text-accent" />
             </div>
             <h3 className="text-lg font-semibold mb-2">Instant Processing</h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Powered by Genkit, our watermarking engine processes thousands of words in milliseconds.
+              Our watermarking engine processes thousands of words in milliseconds with zero visible overhead.
             </p>
           </div>
         </section>
       </main>
 
+      {/* Footer */}
       <footer className="py-12 border-t border-white/5 bg-background/50">
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-sm text-muted-foreground">

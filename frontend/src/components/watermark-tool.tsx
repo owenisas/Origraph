@@ -1,5 +1,15 @@
 "use client";
 
+/**
+ * WatermarkTool Component
+ * 
+ * Main interactive component providing:
+ * - Text input for watermarking and detection
+ * - Watermark embedding & detection functionality
+ * - Result display with toggle tabs
+ * - Demo text loading and clipboard copy
+ */
+
 import React, { useState, useTransition } from "react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
