@@ -17,3 +17,7 @@ Frontend app:
 cd frontend
 npm run dev
 ```
+
+## License
+
+AGPL-3.0. See [LICENSE](./LICENSE).

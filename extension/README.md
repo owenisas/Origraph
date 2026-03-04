@@ -68,3 +68,7 @@ icons/           — Extension icons (add 16/48/128px PNGs)
 | U+2060 | Word Joiner | — |
 | U+FEFF | BOM | — |
 | + 6 more | Various invisible chars | — |
+
+## License
+
+Apache-2.0. See [LICENSE](./LICENSE).

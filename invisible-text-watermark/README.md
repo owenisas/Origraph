@@ -161,3 +161,7 @@ On finalize, at least one tag is always guaranteed.
 ```bash
 PYTHONPATH=src python -m pytest tests/ -v
 ```
+
+## License
+
+Apache-2.0. See [LICENSE](./LICENSE).
